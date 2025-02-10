@@ -6,21 +6,16 @@ export const GifExpertApp = () => {
     const [ categories, setCategories ] = useState(
         [ 'One Piece', 'Dragon Ball' ]
     );
-
-    const onAddCategory = () => {
-        setCategories([ 'Naruto', ...categories ]);
-    };
-
+    
     return (
         <>
             { /* Title */}
             <h1>GitExpertApp</h1>
 
             { /* Input */ }
-            <AddCategory />
+            <AddCategory addCategory={ setCategories } />
 
             { /* Result List */}
-            <button onClick={ onAddCategory }>Add</button>
             <ol>
                 {
                     categories.map( category =>
