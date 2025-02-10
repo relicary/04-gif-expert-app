@@ -8,6 +8,9 @@ export const GifExpertApp = () => {
     );
 
     const onAddCategory = ( newCategory ) => {
+
+        if ( categories.includes(newCategory) ) return;
+
         setCategories([ newCategory, ...categories ]);
     };
     
@@ -17,17 +20,21 @@ export const GifExpertApp = () => {
             <h1>GitExpertApp</h1>
 
             { /* Input */ }
-            <AddCategory onNewCategory = { onAddCategory } />
+            <AddCategory onNewCategory = {
+                (newCategory) =>
+                    onAddCategory(newCategory)
+            } />
 
             { /* Result List */}
             <ol>
                 {
-                    categories.map( category =>
+                    categories.map( ( category ) =>
                         <li key={ category }>{ category }</li>
                     )
                 }
             </ol>
-                { /* Gift Item */}
+            
+            { /* Gift Item */}
         </>
     )
 }
