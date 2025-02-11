@@ -67,4 +67,6 @@ Or
 > yarn build
 ```
 
-And creates the folder `dist`
+And creates the folder `dist` which contains de Prod App optimized
+
+http-server -o
