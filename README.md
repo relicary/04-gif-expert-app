@@ -56,3 +56,15 @@ Or
 ```
 > npm run dev
 ```
+
+# Hooks
+
+`useEffect`: Hook para disparar efectos secundarios
+
+# Howe to deploy
+
+```
+> yarn build
+```
+
+And creates the folder `dist`
