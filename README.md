@@ -59,7 +59,17 @@ Or
 
 # Hooks
 
-`useEffect`: Hook para disparar efectos secundarios
+`useEffect`: Hook para disparar efectos secundarios.
+
+**¿Qué es un efecto secundario?**
+
+Son operaciones que ocurren fuera del flujo de renderizado de React, como:
+
+* Llamadas a APIs (fetch).
+* Manipulación del DOM.
+* Suscripciones a eventos.
+* Timers (setTimeout, setInterval).
+* Limpieza de recursos.
 
 # Howe to deploy
 
@@ -69,4 +79,8 @@ Or
 
 And creates the folder `dist` which contains de Prod App optimized
 
-http-server -o
+For running
+
+```console
+> http-server -o
+```
